@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bookmarkr is to …
+The goal of bookmarkr is provide links of R books.
 
 ## Installation
 
