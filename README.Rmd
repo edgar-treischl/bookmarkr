@@ -36,7 +36,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-df <- readxl::read_excel(here::here("books.xlsx"))
+#df <- readxl::read_excel(here::here("books.xlsx"))
 
 ```
 
