@@ -2,6 +2,7 @@
 output: github_document
 ---
 
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -39,24 +40,14 @@ df <- readxl::read_excel(here::here("books.xlsx"))
 
 ```
 
-```{r setup, eval=FALSE}
+```{r setup, eval=T, error=TRUE}
 #Get links via: 
 rbooks::show_link("keyword")
 ```
 
 
 ```{r}
-head(df)
+head(rbooks::links())
 ```
 
-
-```{r, results='asis', echo=FALSE}
-df <- df |> dplyr::arrange(title)
-
-headers <- paste0("<h2>", df$title, " (by ", df$author, ")", "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
-desc <- paste0("<p>", df$description, "</p>")
-#pics <- paste0()
-output <- stringr::str_c(headers, desc)
-cat(output)
-```
 
