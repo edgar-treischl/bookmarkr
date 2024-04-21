@@ -11,5 +11,15 @@ vignette: >
 
 # Hallo
 
+```{r, include = T}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+df <- readxl::read_excel("books.xlsx")
+head(df)
+```
+
 
 
