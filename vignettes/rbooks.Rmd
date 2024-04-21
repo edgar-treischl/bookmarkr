@@ -1,0 +1,40 @@
+---
+title: "rbooks"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rbooks}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+df <- readxl::read_excel(here::here("books.xlsx"))
+
+```
+
+```{r setup, eval=FALSE}
+#Get links via: 
+rbooks::show_link("keyword")
+```
+
+
+```{r}
+head(df)
+```
+
+
+```{r, results='asis', echo=FALSE}
+df <- df |> dplyr::arrange(title)
+
+headers <- paste0("<h2>", df$title, " (by ", df$author, ")", "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
+desc <- paste0("<p>", df$description, "</p>")
+#pics <- paste0()
+output <- stringr::str_c(headers, desc)
+cat(output)
+```
+

@@ -1,0 +1,21 @@
+Package: bookmarkr
+Title: Get links of R books
+Version: 0.0.0.1
+Authors@R: person("Edgar", "Treischl", 
+                email = "copycat@edgar-treischl.de",
+                comment = c(ORCID = "0000-0001-5627-9125"),
+                role = c("aut", "cre"))
+Description: The package gives access to many free available R books.
+License: CC0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    cli,
+    crayon,
+    stringr,
+    tidyr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
