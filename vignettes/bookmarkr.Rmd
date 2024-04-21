@@ -9,27 +9,6 @@ vignette: >
 
 
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-
-df <- readxl::read_excel(here::here("books.xlsx"))
-
-```
-
-
-
-
-```{r, results='asis', echo=FALSE}
-df <- df |> dplyr::arrange(title)
-
-headers <- paste0("<h2>", df$title, " (by ", df$author, ")", "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
-desc <- paste0("<p>", df$description, "</p>")
-#pics <- paste0()
-output <- stringr::str_c(headers, desc)
-cat(output)
-```
+# Hallo
 
 
