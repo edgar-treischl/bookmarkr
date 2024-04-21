@@ -5,7 +5,8 @@ template:
   bslib:
     base_font: {google: "Lato"}
     heading_font: {google: "Lato"}
-
+development:
+  mode: auto
 authors:
   Edgar Treischl:
     href: https://www.edgar-treischl.de/
