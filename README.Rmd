@@ -29,27 +29,34 @@ You can install the development version of bookmarkr from [GitHub](https://githu
 devtools::install_github("edgar-treischl/bookmarkr")
 ```
 
-## Example
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 
-This is a basic example which shows you how to solve a common problem:
+df <- readxl::read_excel(here::here("books.xlsx"))
 
-```{r example}
-library(bookmarkr)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
+```{r setup, eval=FALSE}
+#Get links via: 
+rbooks::show_link("keyword")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r}
+head(df)
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+
+```{r, results='asis', echo=FALSE}
+df <- df |> dplyr::arrange(title)
+
+headers <- paste0("<h2>", df$title, " (by ", df$author, ")", "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
+desc <- paste0("<p>", df$description, "</p>")
+#pics <- paste0()
+output <- stringr::str_c(headers, desc)
+cat(output)
+```
+
