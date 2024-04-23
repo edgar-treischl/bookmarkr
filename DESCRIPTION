@@ -13,6 +13,7 @@ RoxygenNote: 7.2.3
 Imports: 
     cli,
     crayon,
+    rstudioapi,
     stringr,
     tidyr
 Suggests: 
