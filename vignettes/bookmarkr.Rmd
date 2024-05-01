@@ -9,9 +9,12 @@ vignette: >
 
 
 
+
+
 ```{r, results='asis', echo=FALSE}
 #df <- bookmarkr::links()
 df <- bookmarkr::books
+df <- df |> dplyr::filter(licence == "TRUE")
 df <- df |> dplyr::arrange(title)
 
 headers <- paste0("<br/><h2>", "<a href='", df$link, "'target='_blank'>", df$title, "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
