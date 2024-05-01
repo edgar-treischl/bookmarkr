@@ -7,6 +7,9 @@ template:
     heading_font: {google: "Lato"}
 development:
   mode: auto
+navbar:
+  structure:
+    right: [github]
 authors:
   Edgar Treischl:
     href: https://www.edgar-treischl.de/

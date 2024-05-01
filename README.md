@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# bookmarkr
+# bookmarkr <img src="man/figures/logo.png" alt="bookmarkr - Edgar Treischl" align="right" width="225"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -20,8 +20,8 @@ devtools::install_github("edgar-treischl/bookmarkr")
 
 ``` r
 #Get links via: 
-bookmarkr::show_link("keyword")
-#> Error in `bookmarkr::show_link()`:
+bookmarkr::get_link("keyword")
+#> Error in `bookmarkr::get_link()`:
 #> ! Insert a book key word. Valid examples are: 'advanced_R', 'blogdown',
 #>   'bookdown', 'criminologist_R', 'dataviz', 'ds_cl', 'eng_shiny',
 #>   'feature_engineering', 'fundamentals_dataviz', 'ggplot2', 'hands_on_R',
@@ -31,40 +31,19 @@ bookmarkr::show_link("keyword")
 ```
 
 ``` r
-head(bookmarkr::books)
-#>                                                               title
-#> 1                                                R for Data Science
-#> 2 bookdown: Authoring Books and Technical Documents with R Markdown
-#> 3                                                   Mastering Shiny
-#> 4                                                           Pro Git
-#> 5                                               R Graphics Cookbook
-#> 6                       ggplot2: Elegant Graphics for Data Analysis
-#>       shortcut                                 link
-#> 1         r4ds              https://r4ds.had.co.nz/
-#> 2     bookdown https://bookdown.org/yihui/bookdown/
-#> 3 master_shiny         https://mastering-shiny.org/
-#> 4      pro-git       https://git-scm.com/book/en/v2
-#> 5   r_graphics              https://r-graphics.org/
-#> 6      ggplot2            https://ggplot2-book.org/
-#>                                                                                              pic
-#> 1 https://d33wubrfki0l68.cloudfront.net/b88ef926a004b0fce72b2526b0b5c4413666a4cb/24a30/cover.png
-#> 2                                           https://bookdown.org/yihui/bookdown/images/cover.jpg
-#> 3 https://d33wubrfki0l68.cloudfront.net/0c97eee3d8fc820f3a8d670c08b286e8a524257b/e426c/cover.png
-#> 4                                                         https://git-scm.com/images/progit2.png
-#> 5                                                               https://r-graphics.org/cover.jpg
-#> 6                                                             https://ggplot2-book.org/cover.jpg
-#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               description
-#> 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Use R to turn data into insight, knowledge, and understanding. With this practical book, aspiring data scientists will learn how to do data science with R and RStudio, along with the tidyverseâ??a collection of R packages designed to work together to make data science fast, fluent, and fun. Even if you have no programming experience, this updated edition will have you doing data science quickly.\r\n\r\nYou'll learn how to import, transform, and visualize your data and communicate the results. And you'll get a complete, big-picture understanding of the data science cycle and the basic tools you need to manage the details. Updated for the latest tidyverse features and best practices, new chapters show you how to get data from spreadsheets, databases, and websites. Exercises help you practice what you've learned along the way.
-#> 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  bookdown: Authoring Books and Technical Documents with R Markdown presents a much easier way to write books and technical publications than traditional tools such as LaTeX and Word. The bookdown package inherits the simplicity of syntax and flexibility for data analysis from R Markdown, and extends R Markdown for technical writing, so that you can make better use of document elements such as figures, tables, equations, theorems, citations, and references. Similar to LaTeX, you can number and cross-reference these elements with bookdown. Your document can even include live examples so readers can interact with them while reading the book. The book can be rendered to multiple output formats, including LaTeX/PDF, HTML, EPUB, and Word, thus making it easy to put your documents online. The style and theme of these output formats can be customized.
-#> 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Master the Shiny web framework&;and take your R skills to a whole new level. Shiny helps you create fully interactive web apps for data analyses by letting you move beyond static reports, tables, and graphs. Your users will be able to jump between datasets, explore different subsets, run models with parameter values of their choosing, customize visualizations, and much more.\r\n\r\nHadley Wickham from RStudio shows data scientists, data analysts, statisticians, and scientific researchers with no knowledge of HTML, CSS, or JavaScript how to create complex Shiny apps. Shiny is easy to learn, but even intermediate users often wonder what they've missed. This in-depth introduction provides a learning path that you can follow with confidence.
-#> 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Pro Git (Second Edition) is your fully-updated guide to Git and its usage in the modern world. Git has come a long way since it was first developed by Linus Torvalds for Linux kernel development. It has taken the open source world by storm since its inception in 2005, and this book teaches you how to use it like a pro.\r\n\r\nEffective and well-implemented version control is a necessity for successful web projects, whether large or small. With this book you’ll learn how to master the world of distributed version workflow, use the distributed features of Git to the full, and extend Git to meet your every need.\r\n\r\nWritten by Git pros Scott Chacon and Ben Straub, Pro Git (Second Edition) builds on the hugely successful first edition, and is now fully updated for Git version 2.0, as well as including an indispensable chapter on GitHub. It’s the best book for all your Git needs.
-#> 5                                                                                                                                                                                                                                                                                                                                        This O’Reilly cookbook provides more than 150 recipes to help scientists, engineers, programmers, and data analysts generate high-quality graphs quickly—without having to comb through all the details of R’s graphing systems. Each recipe tackles a specific problem with a solution you can apply to your own project and includes a discussion of how and why the recipe works.\r\n\r\nMost of the recipes in this second edition use the updated version of the ggplot2 package, a powerful and flexible way to make graphs in R. You’ll also find expanded content about the visual design of graphics. If you have at least a basic understanding of the R language, you’re ready to get started with this easy-to-use reference.\r\n\r\nUse R’s default graphics for quick exploration of data Create a variety of bar graphs, line graphs, and scatter plots\r\nSummarize data distributions with histograms, density curves, box plots, and more\r\nProvide annotations to help viewers interpret data\r\nControl the overall appearance of graphics\r\nExplore options for using colors in plots\r\nCreate network graphs, heat maps, and 3D scatter plotsGet your data into shape using packages from the tidyverse
-#> 6 This new edition to the classic book by ggplot2 creator Hadley Wickham highlights compatibility with knitr and RStudio. ggplot2 is a data visualization package for R that helps users create data graphics, including those that are multi-layered, with ease. With ggplot2, it's easy to: \r\n\r\nproduce handsome, publication-quality plots with automatic legends created from the plot specification\r\nsuperimpose multiple layers (points, lines, maps, tiles, box plots) from different data sources with automatically adjusted common scales\r\nadd customizable smoothers that use powerful modeling capabilities of R, such as loess, linear models, generalized additive models, and robust regression\r\nsave any ggplot2 plot (or part thereof) for later modification or reusecreate custom themes that capture in-house or journal style requirements and that can easily be applied to multiple plots\r\napproach a graph from a visual perspective, thinking about how each component of the data is represented on the final plot\r\nThis book will be useful to everyone who has struggled with displaying data in an informative and attractive way. Some basic knowledge of R is necessary (e.g., importing data into R).  ggplot2 is a mini-language specifically tailored for producing graphics, and you'll learn everything you need in the book. After reading this book you'll be able to produce graphics customized precisely for your problems, and you'll find it easy to get graphics out of your head and on to the screen or page.
-#>                                                      author
-#> 1                      Hadley Wickham and Garrett Grolemund
-#> 2                                                 Yihui Xie
-#> 3                                            Hadley Wickham
-#> 4                               Scott Chacon and Ben Straub
-#> 5                                             Winston Chang
-#> 6 Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen
+bookmarkr::books |> dplyr::select(title, shortcut)
+#> # A tibble: 25 × 2
+#>    title                                                             shortcut   
+#>    <chr>                                                             <chr>      
+#>  1 R for Data Science                                                r4ds       
+#>  2 bookdown: Authoring Books and Technical Documents with R Markdown bookdown   
+#>  3 Mastering Shiny                                                   master_shi…
+#>  4 Pro Git                                                           pro-git    
+#>  5 R Graphics Cookbook                                               r_graphics 
+#>  6 ggplot2: Elegant Graphics for Data Analysis                       ggplot2    
+#>  7 Fundamentals of Data Visualization                                fundamenta…
+#>  8 Data Visualization: A practical introduction                      dataviz    
+#>  9 R Markdown Cookbook                                               rmarkdown_…
+#> 10 R Packages                                                        r_packages 
+#> # ℹ 15 more rows
 ```

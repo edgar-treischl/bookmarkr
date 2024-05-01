@@ -14,7 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# bookmarkr
+
+# bookmarkr <img src="man/figures/logo.png" alt="bookmarkr - Edgar Treischl" align="right" width="225"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -42,25 +43,15 @@ knitr::opts_chunk$set(
 
 ```{r setup, eval=T, error=TRUE}
 #Get links via: 
-bookmarkr::show_link("keyword")
+bookmarkr::get_link("keyword")
 ```
 
 
 ```{r}
-head(bookmarkr::books)
+bookmarkr::books |> dplyr::select(title, shortcut)
 ```
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
 
-#df <- readxl::read_excel("books.xlsx")
-
-#df <- bookmarkr::links()
-
-```
 
 
 

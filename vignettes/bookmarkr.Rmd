@@ -14,7 +14,7 @@ vignette: >
 df <- bookmarkr::books
 df <- df |> dplyr::arrange(title)
 
-headers <- paste0("<br/><h2>", df$title, "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
+headers <- paste0("<br/><h2>", "<a href='", df$link, "'target='_blank'>", df$title, "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
 authors <- paste0("<h3>", " by ", df$author, "</h3><br/>")
 desc <- paste0("<p>", df$description, "</p><br/>")
 #pics <- paste0()
