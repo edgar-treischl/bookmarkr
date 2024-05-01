@@ -35,7 +35,7 @@
 # }
 
 
-#' Show a book link.
+#' Get a book link.
 #'
 #' @description The function copies the URL and
 #' opens the link in the browser.
@@ -47,7 +47,7 @@
 #'
 
 
-show_link <- function(name, browse = TRUE) {
+get_link <- function(name, browse = TRUE) {
 
   #df <- links()
   df <- bookmarkr::books
@@ -87,17 +87,18 @@ show_link <- function(name, browse = TRUE) {
 
 }
 
-#' booksmarks links
+#' The booksmarker website
 #'
 #' @description The function has no input
-#' and returns all links from Practice R
+#' and returns website in the browser
 #'
-#' @return Prints data frame
 #' @export
 
-booksmarks <- function() {
-  html <- list.files(system.file("preview", package = "rbooks"), full.names = T)
-  html <- html[1]
+website <- function() {
+  # html <- list.files(system.file("books", package = "bookmarkr"), full.names = T)
+  # html <- html[1]
+  # html
+  html <- "https://edgar-treischl.github.io/bookmarkr/"
 
   #viewer <- getOption("viewer", default = utils::browseURL)
   #getOption("viewer")
