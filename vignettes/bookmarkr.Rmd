@@ -10,12 +10,13 @@ vignette: >
 
 
 ```{r, results='asis', echo=FALSE}
-df <- bookmarkr::links()
+#df <- bookmarkr::links()
+df <- bookmarkr::books
 df <- df |> dplyr::arrange(title)
 
-headers <- paste0("<h2>", df$title, "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
-authors <- paste0("<h3>", " by ", df$author, "</h3><br />")
-desc <- paste0("<p>", df$description, "</p><br />")
+headers <- paste0("<br/><h2>", df$title, "</h2>", "<a href='", df$link, "'target='_blank'><img align='right' src='", df$pic, "' width='150' height='200'></a>")
+authors <- paste0("<h3>", " by ", df$author, "</h3><br/>")
+desc <- paste0("<p>", df$description, "</p><br/>")
 #pics <- paste0()
 output <- stringr::str_c(headers, authors, desc)
 cat(output)

@@ -42,12 +42,12 @@ knitr::opts_chunk$set(
 
 ```{r setup, eval=T, error=TRUE}
 #Get links via: 
-rbooks::show_link("keyword")
+bookmarkr::show_link("keyword")
 ```
 
 
 ```{r}
-head(rbooks::links())
+head(bookmarkr::books)
 ```
 
 ```{r, include = FALSE}

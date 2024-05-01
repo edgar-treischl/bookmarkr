@@ -13,10 +13,14 @@ RoxygenNote: 7.2.3
 Imports: 
     cli,
     crayon,
-    rstudioapi,
+    rstudioapi
+Suggests:
+    dplyr,
+    knitr,
+    rmarkdown,
     stringr,
     tidyr
-Suggests: 
-    knitr,
-    rmarkdown
 VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)
+LazyData: true
