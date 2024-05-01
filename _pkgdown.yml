@@ -1,4 +1,5 @@
 url: https://edgar-treischl.github.io/bookmarkr/
+destination: "inst/web"
 template:
   bootstrap: 5
   bootswatch: simplex

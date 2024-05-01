@@ -95,10 +95,10 @@ get_link <- function(name, browse = TRUE) {
 #' @export
 
 website <- function() {
-  # html <- list.files(system.file("books", package = "bookmarkr"), full.names = T)
-  # html <- html[1]
+  html <- list.files(system.file("web", package = "bookmarkr"), full.names = T)
+  html <- html[14]
   # html
-  html <- "https://edgar-treischl.github.io/bookmarkr/"
+  #html <- "https://edgar-treischl.github.io/bookmarkr/"
 
   #viewer <- getOption("viewer", default = utils::browseURL)
   #getOption("viewer")
