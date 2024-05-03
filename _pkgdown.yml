@@ -1,5 +1,4 @@
 url: https://edgar-treischl.github.io/bookmarkr/
-destination: "inst/web"
 template:
   bootstrap: 5
   bootswatch: simplex
@@ -10,7 +9,11 @@ development:
   mode: auto
 navbar:
   structure:
-    right: [github]
+    left:
+    - intro
+    - reference
+    - articles
+    right: github
 authors:
   Edgar Treischl:
     href: https://www.edgar-treischl.de/
