@@ -2,7 +2,7 @@
 title: "books"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{bookmarkr}
+  %\VignetteIndexEntry{books}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
