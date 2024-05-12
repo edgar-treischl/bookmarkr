@@ -2,10 +2,10 @@ Package: bookmarkr
 Title: Get links of R books
 Version: 0.0.0.1
 Authors@R: person("Edgar", "Treischl", 
-                email = "copycat@edgar-treischl.de",
+                email = "edgar@edgar-treischl.de",
                 comment = c(ORCID = "0000-0001-5627-9125"),
                 role = c("aut", "cre"))
-Description: The package gives access to many free available R books.
+Description: The package gives access to R books published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 License: CC0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -24,5 +24,5 @@ VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
 LazyData: true
-URL: https://edgar-treischl.github.io/bookmarkr/
-BugReports: https://edgar-treischl.github.io/bookmarkr/issues
+URL: https://github.com/edgar-treischl/bookmarkr
+BugReports: https://github.com/edgar-treischl/bookmarkr/issues

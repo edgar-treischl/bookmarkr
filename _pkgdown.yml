@@ -13,7 +13,7 @@ navbar:
     - intro
     - reference
     - articles
-    right: github
+    right: [github]
 authors:
   Edgar Treischl:
     href: https://www.edgar-treischl.de/

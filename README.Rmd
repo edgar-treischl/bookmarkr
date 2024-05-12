@@ -2,7 +2,6 @@
 output: github_document
 ---
 
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -14,13 +13,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 # bookmarkr <img src="man/figures/logo.png" alt="bookmarkr - Edgar Treischl" align="right" width="225"/>
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of bookmarkr is provide links of R books.
+The goal of bookmarkr is provide links of R books which are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 ## Installation
 
@@ -41,10 +40,7 @@ knitr::opts_chunk$set(
 
 ```
 
-```{r setup, eval=T, error=TRUE}
-#Get links via: 
-bookmarkr::get_link("keyword")
-```
+The package install a data frame with book details. For example:
 
 
 ```{r}
@@ -52,9 +48,9 @@ bookmarkr::books |> dplyr::select(title, shortcut)
 ```
 
 
-
-
-
-
+```{r setup, eval=T, error=TRUE}
+#Get links via: 
+bookmarkr::get_link("keyword")
+```
 
 
